@@ -71,3 +71,11 @@ void PrintArray(string[] array)
     }
     Console.Write("]");
 }
+
+string[] array = EnterStrings();
+
+string[] newArray = CreateArrayOfStringsLengthLess3(array);
+
+PrintArray(array);
+Console.Write (" → ");
+PrintArray(newArray);
