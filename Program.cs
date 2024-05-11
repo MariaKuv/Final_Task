@@ -23,3 +23,32 @@ string[] EnterStrings()
     }
     return array;
 }
+
+// Функция для нахождения нового массива
+string[] CreateArrayOfStringsLengthLess3(string[] array)
+{
+    // Определяем размер результирующего массива
+    int sizeNewArray = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            sizeNewArray++;
+        }
+    }
+
+    // Создаем новый массив
+    string[] newArray = new string[sizeNewArray];
+    int j = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
